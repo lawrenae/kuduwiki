@@ -57,9 +57,13 @@ b. Install the [azure-cli](http://www.windowsazure.com/en-us/manage/linux/other-
 
     npm install azure-cli -g
 
-c. Go to the root of your repository (from which you deploy your site).
+c. Switch azure console to _asm_ mode
 
-d. Run the custom deployment script generator command:
+    azure config mode asm
+
+d. Go to the root of your repository (from which you deploy your site).
+
+e. Run the custom deployment script generator command:
 
     azure site deploymentscript [options]
 
