@@ -22,7 +22,7 @@ See the [[Version history]] page for details.
 * [[Web Hooks]]
 * [[Azure Site Extensions]] (see also [[Xdt Transform Samples]])
 * [[Post Deployment Action Hooks]]
-* [[Web Jobs]]
+* [[WebJobs]]
 
 ### How-to guides
 
