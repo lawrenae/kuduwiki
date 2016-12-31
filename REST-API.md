@@ -104,6 +104,7 @@ The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with tra
 
     POST /deploy
     Payload: { format: 'basic', url: 'https://github.com/SomeOrg/SomeRepo.git' } 
+    Or when using ssh: { format: 'basic', url: 'git@github.com:SomeOrg/SomeRepo.git' }
     Trigger a new deployment from that repository 
 
     POST /deploy
