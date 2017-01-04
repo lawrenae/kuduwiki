@@ -166,6 +166,27 @@ These limits apply only for customers of Basic or higher plans; in other words c
 | ---------- | ----------- | ---------- | ----------- | ----------
 | Connections | Number of connections across entire VM | 1920 | 3968 | 8064
 
+#### .NET Threadpool and ASP.NET Settings
+
+The maxConcurrentRequestsPerCPU setting specifies how many simultaneous requests ASP.NET allows per CPU. This setting is different depending on the size of VM configured.
+
+| Setting name |  Small (A1) | Medium (A2) | Large (A3)
+| ---------- | ----------- | ---------- | ----------- 
+| maxConcurrentRequestsPerCpu |  7500 | 7500 | 18750
+| Number of Cores | 1 | 2 | 4
+| Actual MaxConcurrentRequestsValue | 7500 | 15000 | 75000
+
+These are the default values of some other .NET Threadpool settings
+
+| Setting name |  Value
+| ---------- | ----------- 
+| maxWorkerThreads | 8191
+| minWorkerThreads | 4
+| maxIoThreads| 1000
+| minIoThreads| 4
+
+If you want to alter these settings, you can call ThreadPool.SetMinThreads and ThreadPool.SetMaxThreads functions in the Application_Start event of global.asax
+
 ### Unsupported frameworks
 
 Here is a list of frameworks and scenarios that have been found to be not be usable due to one or more of the restrictions above. It's conceivable that some will be supported in the future as the sandbox evolves.
