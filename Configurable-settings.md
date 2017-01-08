@@ -68,7 +68,7 @@ With this flag, a `git push` updates the server repo, but does not trigger a dep
 
 ### Add custom delay before deployment
 
-By default, kudu starts deployment as soon as git repository is updated. You can delay this deployment for **X** sec, **X** being a random number between 0 and SCM_MAX_RANDOM_START_DELAY
+By default, kudu starts deployment as soon as git repository is updated. You can delay this deployment for **X** seconds, **X** being a random number between 0 and SCM_MAX_RANDOM_START_DELAY
 
     SCM_MAX_RANDOM_START_DELAY=100
 
