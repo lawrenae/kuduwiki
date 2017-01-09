@@ -40,9 +40,9 @@ Use the following steps:
 
 **Note**: Unlike the Resource Explorer case above, the repoUrl property should not be changed when configuring manually. The webhook payload should already contain the remote repository URL.
 
-### Create an Azure Website with local git enabled
+### Create an Azure Web App and enable source control with an 'External Repository'
 
-When setting things up manually as described here, you'll need to enable the 'Local Git repository' option in the portal for your site. Even though you will in fact set up continuous deployment, this is the option that allows things to work.  
+Use your repo's URL when setting this up. This will allow the 'sync' button in the portal to work.
 
 ### Set up a Web Hook so Kudu gets notified when a deployment happens
 
