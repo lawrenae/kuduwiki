@@ -52,10 +52,11 @@ The VFS API is based on <https://github.com/c9/vfs-http-adapter>. Paths with tra
 ## Zip
    The Zip API allows downloading folders as zip files, or expanding zip files into folders.
 
-    GET /api/zip/{path}
-    Zip up and download the specified folder. The zip doesn't include the top folder itself.
+    GET /api/zip/{path}/
+    Zip up and download the specified folder. The zip doesn't include the top folder itself. Make sure you include
+    the trailing slash!
 
-    PUT /api/zip/{path}
+    PUT /api/zip/{path}/
     Upload a zip file which gets expanded into the specified folder. Existing files are not deleted
     unless they need to be overwritten by files in the zip. The path can be nested (e.g. `folder1/folder2`), and needs to exist.
 
