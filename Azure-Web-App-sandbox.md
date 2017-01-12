@@ -93,7 +93,9 @@ As a convenience for our customers, the sandbox implements a dynamic symbolic li
 
 #### Local directory access (d:\local)
 
-Every Azure Web App has a local directory which is temporary and is deleted when the run is no longer running on the VM.  This directory is a place to store temporary data for the application.  The sandbox implements a dynamic symbolic link which maps `d:\local` to point to this directory.  The application naturally has read/write access to this directory.   
+Every Azure Web App has a local directory which is temporary and is deleted when the run is no longer running on the VM.  This directory is a place to store temporary data for the application.  The sandbox implements a dynamic symbolic link which maps `d:\local` to point to this directory.  The application naturally has read/write access to this directory.
+
+Note that the `d:\local` folder in the scm site (where Kudu runs) is not the same as the one in the main site (where the web app runs). As a result, they cannot see each other's local files.
 
 #### System drive access
 
