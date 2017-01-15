@@ -86,7 +86,7 @@ Yes. You could simply use phpMyAdmin (see how to access above).   Programaticall
 Yes.  The connection string is stored at `D:\home\data\mysql\MYSQLCONNSTR_localdb.txt`.   The application (such as wordpress) reads from this file for what database, username and password to use.  This also applies to what to backup and restore provided by Azure WebApps.   If you want to customize the database, username and password, after you have created a new database, add new username or update password, simply modify `D:\home\data\mysql\MYSQLCONNSTR_localdb.ini`
 , remove `D:\home\data\mysql\MYSQLCONNSTR_localdb.txt` and restart the WebApps.
 
-#### Issue: Cannot connect to mysql invalid settings or wrong username/password?
+#### Cannot connect to mysql invalid settings or wrong username/password.
 
 Try delete `D:\home\data\mysql\MYSQLCONNSTR_localdb.txt` and restart the WebApps.
 
