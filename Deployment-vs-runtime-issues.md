@@ -37,3 +37,25 @@ There are many things that could cause a runtime issue. e.g.
 The simplest way is to use the [[Kudu Console]] to look at the files in your wwwroot folder. It even lets you easily download everything in that folder as a zip file, so you can analyze it locally.
 
 It can take a little bit of effort, but it is a key step to take to help getting your issue properly investigated.
+
+## Deployments and Web App restarts
+
+A common misconception is that the deploying content to a Web App causes the app to be restarted. The reality is that deployment pretty much does only one thing: it deploys files into the `wwwroot` folder. It never *directly* does anything to restart the App. 
+
+This is true whether you use Visual Studio deployment (msdeploy), git/GitHub/etc deployment, FTP, or manually copy some files over using Kudu Console.
+
+The key word above is *directly*, meaning the deployment doesn't make any magic API calls that cause a site restart. However, in some cases, the act of deploying files into `wwwroot` can cause some form of restart. In that sense, the deployment is `indirectly` causing a restart, but it really knows nothing about it. It's up to the Application's **runtime** to react to file change notifications and do what it thinks is right.
+
+And different stacks do things very differently. e.g. to give a couple examples:
+
+- In ASP.NET, touching `web.config` or any file in `bin` causes the App Domain to shut down (not restart!). And then the next request will cause a new App Domain to start.
+- In a Node app, touching `web.config` causes the Node.exe process to terminate, and a new one to start.  
+
+As such, when you have a restart issue, avoid stating the question as *"I'm deploying new version and my site is not restarting"*, as it is not directly meaningful.
+
+Instead, the key things to state/ask are:
+
+- What stack are you running: ASP.NET, .NET Core, PHP, Node, ...?
+- What specific files did you deploy?
+- Did you make sure that those new files actually made it to your `wwwroot` folder?
+- What specific behavior are you expecting to see as a result of the new files, and how does it compare to what you are seeing?
