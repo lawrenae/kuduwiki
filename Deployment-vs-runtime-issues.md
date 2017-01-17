@@ -40,7 +40,7 @@ It can take a little bit of effort, but it is a key step to take to help getting
 
 ## Deployments and Web App restarts
 
-A common misconception is that the deploying content to a Web App causes the app to be restarted. The reality is that deployment pretty much does only one thing: it deploys files into the `wwwroot` folder. It never *directly* does anything to restart the App. 
+A common misconception is that deploying content to a Web App causes the app to be restarted. The reality is that **deployment pretty much does only one thing: it deploys files into the `wwwroot` folder. It never *directly* does anything to restart the App.** 
 
 This is true whether you use Visual Studio deployment (msdeploy), git/GitHub/etc deployment, FTP, or manually copy some files over using Kudu Console.
 
