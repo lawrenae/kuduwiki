@@ -167,7 +167,7 @@ Here is one way to do it (we should try to make this easier in the future):
 
 #### Finding the log of what happened during the transform
 
-If you look under `/LogFiles/Transform` you should see a log that gives info about what happened during the transforms. This can be very useful when errors happen.
+If you look under `D:\home\LogFiles\Transform` you should see a log that gives info about what happened during the transforms. This can be very useful when errors happen.
 
 #### Disabling the private extension transform
 
