@@ -156,7 +156,7 @@ These limits apply to each sandbox and therefore represent the sum usage of all 
 | ---------- | ----------- | ----------------- | ------------ |
 | Threads | Number of threads| 512 | Unlimited |
 | Processes | Number of processes | 32 | Unlimited |
-| Connections | Number of bound sockets outstanding | 250 | Unlimited |
+| Connections | Number of bound sockets outstanding | 300 | Unlimited |
 | Named Pipes | Number of named pipes | 128 | 128 |
 | Listen Sockets | Number of listen sockets | 256 | 256 |
 
