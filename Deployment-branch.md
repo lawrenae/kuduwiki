@@ -26,4 +26,6 @@ Which results in:<br>
 ![anotherbranch](https://cloud.githubusercontent.com/assets/6472374/18649223/fefa65aa-7ec6-11e6-8696-2b89bec5147e.png)
 
 The Azure portal (portal.azure.com) also has UI to change this:<br>
-**Deployment options** blade -> **Disconnect** -> **Setup** -> **Choose branch**.
+**Deployment options** blade -> **Disconnect** -> **Setup** -> **Choose branch**. This currently doesn't work in the 'local git' case.
+
+As an alternative, you can set the branch by setting an Azure App Setting called `deployment_branch`.
