@@ -4,7 +4,7 @@ The Azure Portal supports setting up continuous deployment from a VSTS account. 
 
 The last step is that you need to link your VSTS account to your Azure subscription (see also [this post](https://www.visualstudio.com/en-us/get-started/setup/set-up-billing-for-your-account-vs) on this topic).
 
-To do this, go to the Azure Portal, click Browse and search for 'Team':
+To do this, go to the Azure Portal, click More Services (image says 'Browse' but that was the old name) and search for 'Team':
 
 ![image](https://cloud.githubusercontent.com/assets/556238/13531726/d8c9608e-e1dc-11e5-83a0-d35df99cc62b.png)
 
