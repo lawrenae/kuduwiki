@@ -19,7 +19,7 @@ Transfer-encoding: chunked
     "url":"https://username:password@example.com/git/RepositoryName.git"
 }
 ````
-For Mercurial (hg) add `"is_hg": true` to the JSON payload.  
+For Mercurial (hg), unless the `url` begins with `hg@`, do add `"scm": "hg"` to the JSON payload.  
 
 Optionally, you can pass `/deploy?isAsync=true` which will make the deployment to run asynchronously.  The response will return immediately with `Location` header where to poll the status of the deployment.
 
