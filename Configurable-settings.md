@@ -16,6 +16,7 @@ e.g. to choose the Debug build configuration (default is Release) and apply a ch
 
 As another example, to do a clean build, you can use:
  
+    [config]
     SCM_BUILD_ARGS=-t:Clean;Compile
 
 ### Taking over the script generator command line
