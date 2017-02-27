@@ -14,6 +14,10 @@ e.g. to choose the Debug build configuration (default is Release) and apply a ch
     [config]
     SCM_BUILD_ARGS=-p:Configuration=Debug;PublishProfile=MyChainedTransform
 
+As another example, to do a clean build, you can use:
+ 
+    SCM_BUILD_ARGS=-t:Clean;Compile
+
 ### Taking over the script generator command line
 
 Kudu uses the `azure site deploymentscript` command described [here](http://blog.amitapple.com/post/38418009331/azurewebsitecustomdeploymentpart2) to generate a deployment script. By default, it figures out what parameters to pass by looking at the files in the repo to determine the project type (e.g. Node, ASP.NET, ...).
